@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nx run nx-electron:serve",
     "build": "nx run nx-electron:build",
-    "link": "npm link ./dist/packages/nx-electron/",
+    "link": "npm link dist/packages/nx-electron/",
     "test": "nx run nx-electron:test",
     "test:watch": "nx run nx-electron:test -- --watch",
     "lint": "nx run nx-electron:lint",
@@ -28,7 +28,7 @@
     "@nx/linter": "^16.0.0",
     "@nx/node": "^16.0.0",
     "@nx/plugin": "^16.0.0",
-    "@nx/workspace": "^16.0.0",
+    "@nx/workspace": "^17.0.3",
     "@schematics/angular": "16.0.2",
     "@swc-node/register": "^1.6.5",
     "@swc/core": "^1.3.59",

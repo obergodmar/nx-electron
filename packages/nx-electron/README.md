@@ -12,8 +12,6 @@ Electron builders and schematics for Nrwl Nx platform.
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/bennymeg)
 [![Star this repo](https://img.shields.io/github/stars/bennymeg/nx-electron?style=social)](https://github.com/bennymeg/nx-electron)
 
-
-
 </div>
 
 <hr></br>
@@ -133,7 +131,7 @@ If you're having any problem, please [raise an issue](https://github.com/bennyme
 ## Versioning
 
 This repository follows the semantic versioning rules while adhering to Nx and Angular version scheme.
-I.e. version 15.x of nx-electron will be compatible with version 15.y of NX. 
+I.e. version 15.x of nx-electron will be compatible with version 15.y of NX.
 
 ## Attribution
 

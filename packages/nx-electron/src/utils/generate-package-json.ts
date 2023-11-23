@@ -44,9 +44,12 @@ export function generatePackageJson(
 
   packageJson.version = rootPackageJson.version || '0.0.0';
   packageJson['author'] = packageJson['author'] || rootPackageJson.author || '';
-  packageJson['description'] = packageJson['description'] || rootPackageJson.description || '';
-  packageJson['license'] = packageJson['license'] || rootPackageJson.license || 'UNLICENSED';
-  packageJson['private'] = packageJson['private'] || rootPackageJson.private || true;
+  packageJson['description'] =
+    packageJson['description'] || rootPackageJson.description || '';
+  packageJson['license'] =
+    packageJson['license'] || rootPackageJson.license || 'UNLICENSED';
+  packageJson['private'] =
+    packageJson['private'] || rootPackageJson.private || true;
 
   // update dependencies
   Object.entries(dependencies).forEach(([packageName, version]) => {

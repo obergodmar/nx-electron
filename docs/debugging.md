@@ -1,10 +1,13 @@
 # Debugging
+
 In this document we will describe how to configure you IDE to debug your nx-electron application.
 
 ## VS Code Configurations
 
 ### Hot Reloading Debugger
+
 - Launch.json configuration:
+
 ```
 {
             "name": "Attach Main Process",
@@ -18,17 +21,19 @@ In this document we will describe how to configure you IDE to debug your nx-elec
 ```
 
 - package.json script
-`"serve:main": "nx serve --inspect=inspect-brk {electron-app-name}"`
+  `"serve:main": "nx serve --inspect=inspect-brk {electron-app-name}"`
 
 - Invocation:
+
   - Run this command before attaching the debugger:
     `npm run serve:main`
 
-  - We cant use a task here due to the the live reload feature 
-
+  - We cant use a task here due to the the live reload feature
 
 ### Static Debugger
+
 - Launch.json configuration:
+
 ```
 {
             "name": "Debug Main Process",
@@ -47,6 +52,7 @@ In this document we will describe how to configure you IDE to debug your nx-elec
 ```
 
 - Tasks.json task:
+
 ```
 {
         "label": "build:main",
@@ -58,10 +64,12 @@ In this document we will describe how to configure you IDE to debug your nx-elec
 ```
 
 - package.json script
-`"build:main": "nx build {electron-app-name}"`
+  `"build:main": "nx build {electron-app-name}"`
 
 ## Rider / Webstorm
+
 Edit your Electron App project.json and add the following lines to the `serve`-configuration:
+
 ```json
  "serve": {
       "executor": "nx-electron:execute",
@@ -73,9 +81,9 @@ Edit your Electron App project.json and add the following lines to the `serve`-c
         "inspect": true
       }
     },
-```    
+```
 
-This tells electron to open the port 9223 for debugging. 
+This tells electron to open the port 9223 for debugging.
 
 Next you go to your configurations and add "Attach to Node.js/Chrome"
 ![image](https://user-images.githubusercontent.com/3856060/220625282-c1293cb6-80f1-47c5-9ceb-e881d30f8e9e.png)

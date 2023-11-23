@@ -90,14 +90,15 @@ export function getBaseWebpackPartial(
     plugins: [
       new ForkTsCheckerWebpackPlugin({
         typescript: {
-          enabled: true,
           configFile: options.tsConfig,
           memoryLimit: options.memoryLimit || 2018,
         },
       }),
       new DefinePlugin({
-        __BUILD_VERSION__: 
-          options.extraMetadata?.version || JSON.stringify(require(join(options.root, 'package.json')).version),
+        __BUILD_VERSION__:
+          options.extraMetadata?.version ||
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
+          JSON.stringify(require(join(options.root, 'package.json')).version),
         __BUILD_DATE__: Date.now(),
       }),
     ],

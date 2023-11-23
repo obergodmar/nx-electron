@@ -89,10 +89,7 @@ describe('ElectronBuildBuilder', () => {
         () => (options) => ({ ...options, prop: 'my-val' }),
         { virtual: true }
       );
-      await executor(
-        { ...options, webpackConfig: 'config.js' },
-        context
-      );
+      await executor({ ...options, webpackConfig: 'config.js' }, context);
 
       expect(runWebpack).toHaveBeenCalledWith(
         expect.objectContaining({

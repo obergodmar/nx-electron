@@ -17,7 +17,7 @@ describe('MakeElectronBuilder', () => {
     options = {
       root: '.',
       platform: 'windows',
-      extraProjects:[],
+      extraProjects: [],
       arch: 'x64',
       name: 'electron-app',
       frontendProject: 'frontend',

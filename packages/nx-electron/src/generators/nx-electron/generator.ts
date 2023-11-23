@@ -15,7 +15,7 @@ import {
   Tree,
   updateNxJson,
   updateProjectConfiguration,
-  runTasksInSerial
+  runTasksInSerial,
 } from '@nx/devkit';
 
 import { join } from 'path';
@@ -81,7 +81,7 @@ function getPackageConfig(options: NormalizedSchema): TargetConfiguration {
     options: {
       name: options.name,
       frontendProject: options.frontendProject || '',
-      sourcePath: "dist/apps",
+      sourcePath: 'dist/apps',
       outputPath: 'dist/packages',
       prepackageOnly: true,
     },
@@ -94,7 +94,7 @@ function getMakeConfig(options: NormalizedSchema): TargetConfiguration {
     options: {
       name: options.name,
       frontendProject: options.frontendProject || '',
-      sourcePath: "dist/apps",
+      sourcePath: 'dist/apps',
       outputPath: 'dist/executables',
     },
   };
@@ -112,11 +112,7 @@ function addProject(tree: Tree, options: NormalizedSchema) {
   project.targets.package = getPackageConfig(options);
   project.targets.make = getMakeConfig(options);
 
-  addProjectConfiguration(
-    tree,
-    options.name,
-    project
-  );
+  addProjectConfiguration(tree, options.name, project);
 
   const nxJsonConfiguration = readNxJson(tree);
 

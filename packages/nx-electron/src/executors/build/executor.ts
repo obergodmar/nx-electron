@@ -80,7 +80,10 @@ export function executor(
   }
 
   if (normalizedOptions.generatePackageJson) {
-    createPackageJson(context.projectName, projGraph, { ...normalizedOptions, 'isProduction': true });
+    createPackageJson(context.projectName, projGraph, {
+      ...normalizedOptions,
+      isProduction: true,
+    });
   }
 
   let config = getElectronWebpackConfig(normalizedOptions);

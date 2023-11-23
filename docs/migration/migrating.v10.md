@@ -1,7 +1,7 @@
 # Migrating To Version 10.0.0
 
-
 **1.** In `angular.json` file, update following configurations in `projects > {electron-app-name} > architect`:
+
 ```json
     "package": {
         "builder": "nx-electron:package",
@@ -20,7 +20,7 @@
     },
 ```
 
-> **💡  The steps below are only necessary if you are using [Context Isolation](https://www.electronjs.org/docs/tutorial/context-isolation).**
+> **💡 The steps below are only necessary if you are using [Context Isolation](https://www.electronjs.org/docs/tutorial/context-isolation).**
 
 **2.** Add folder and file `.\apps\<electron-app-name>\src\app\api\preload.ts` with the following contents:
 
@@ -28,8 +28,8 @@
 import { contextBridge, ipcRenderer } from 'electron';
 
 contextBridge.exposeInMainWorld('electron', {
-    getAppVersion: () => ipcRenderer.invoke('get-app-version'),
-    platform: process.platform
+  getAppVersion: () => ipcRenderer.invoke('get-app-version'),
+  platform: process.platform,
 });
 ```
 

@@ -233,9 +233,10 @@ fdescribe('app', () => {
     });
 
     it('should add the proxy config to the frontend project', () => {
-      expect(readJson(tree, 'electron-frontend/project.json').targets.serve.options.proxyConfig).toBe(
-        'electron-frontend/proxy.conf.json'
-      )
+      expect(
+        readJson(tree, 'electron-frontend/project.json').targets.serve.options
+          .proxyConfig
+      ).toBe('electron-frontend/proxy.conf.json');
     });
   });
 

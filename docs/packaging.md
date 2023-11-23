@@ -5,6 +5,7 @@ You can find a detailed description of all of its available options [here](https
 **Note:** in order to avoid confusion, the cli `publish` parameter have been renamed to `publishPolicy`.
 
 ## CLI options
+
 The CLI options that can be passed are described [here](https://github.com/bennymeg/nx-electron/blob/master/packages/nx-electron/src/validation/maker.schema.json).
 
 ## Configuring static packaging options
@@ -13,6 +14,7 @@ It is possible to configure all the packaging that are describes above in _`.\ap
 **Notice:** the option you define at this file will override the options you pass manually via the command line or choose via the angular console.
 
 Example static packaging options file (_`.\apps\<electron-app-name>\src\app\options\maker.options.json`_):
+
 ```json
 {
   "$schema": "../../../../../node_modules/nx-electron/src/validation/maker.schema.json",
@@ -27,10 +29,10 @@ Example static packaging options file (_`.\apps\<electron-app-name>\src\app\opti
     "certificateFile": "relative\\path\\to\\certificate.pfx",
     "publisherName": "Benny Megidish"
   },
-  "appx": {   
+  "appx": {
     "displayName": "Awesome App",
     "publisherDisplayName": "Benny Megidish",
     "backgroundColor": "transparent"
   }
-} 
+}
 ```

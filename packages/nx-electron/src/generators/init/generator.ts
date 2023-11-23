@@ -64,8 +64,7 @@ export async function generator(tree: Tree, schema: Schema) {
   await installTask();
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  return async () => {
-  };
+  return async () => {};
 }
 
 export default generator;

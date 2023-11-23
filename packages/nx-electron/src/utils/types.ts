@@ -45,7 +45,7 @@ export interface BuildBuilderOptions {
   root?: string;
   sourceRoot?: string;
   projectRoot?: string;
-  
+
   // tsPlugins?: TsPluginEntry[];
 
   additionalEntryPoints?: AdditionalEntryPoint[];

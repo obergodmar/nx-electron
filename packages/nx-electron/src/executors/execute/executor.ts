@@ -144,7 +144,10 @@ async function* startBuild(
   options: ElectronExecuteBuilderOptions,
   context: ExecutorContext
 ) {
-  const buildTarget = parseTargetString(options.buildTarget, context.projectGraph);
+  const buildTarget = parseTargetString(
+    options.buildTarget,
+    context.projectGraph
+  );
   const buildOptions = readTargetOptions<ElectronExecuteBuilderOptions>(
     buildTarget,
     context

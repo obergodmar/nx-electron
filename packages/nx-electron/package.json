@@ -1,6 +1,6 @@
 {
-  "name": "nx-electron",
-  "version": "16.1.0",
+  "name": "@obergodmar/nx-electron",
+  "version": "17.0.0",
   "main": "src/index.js",
   "description": "Electron Plugin for Nx",
   "author": "Benny Megidish",
@@ -9,13 +9,9 @@
   "schematics": "./generators.json",
   "executors": "./executors.json",
   "builders": "./executors.json",
-  "ng-update": {
-    "requirements": {},
-    "migrations": "./migrations.json"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bennymeg/nx-electron.git"
+    "url": "git+https://github.com/obergodmar/nx-electron.git"
   },
   "bugs": {
     "url": "https://github.com/bennymeg/nx-electron/issues"
@@ -47,7 +43,7 @@
   ],
   "peerDependencies": {
     "electron": "*",
-    "@nx/workspace": "^16"
+    "@nx/workspace": "^17"
   },
   "dependencies": {
     "copy-webpack-plugin": "^11.0.0",

@@ -1,7 +1,4 @@
-import {
-  readJson,
-  Tree,
-} from '@nx/devkit';
+import { readJson, Tree } from '@nx/devkit';
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
 import { electronVersion, nxElectronVersion } from '../../utils/versions';
